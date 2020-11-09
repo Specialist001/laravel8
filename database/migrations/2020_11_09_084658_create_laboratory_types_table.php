@@ -15,7 +15,7 @@ class CreateLaboratoryTypesTable extends Migration
     {
         Schema::create('laboratory_types', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->string('slug');
             $table->string('type');
             $table->timestamps();
         });

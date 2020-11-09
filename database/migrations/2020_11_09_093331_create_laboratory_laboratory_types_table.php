@@ -17,7 +17,7 @@ class CreateLaboratoryLaboratoryTypesTable extends Migration
             $table->id();
             $table->foreignId('laboratory_id')->constrained('laboratories');
             $table->foreignId('laboratory_type_id')->constrained('laboratory_types');
-            $table->unique(['laboratory_id', 'laboratory_type_id']);
+            $table->unique(['laboratory_id', 'laboratory_type_id'], 'laboratory_id_laboratory_type_id_unique');
             $table->timestamps();
         });
     }
